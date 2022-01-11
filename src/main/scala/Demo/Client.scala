@@ -1,5 +1,0 @@
-package Demo
-
-class Client() {
-
-}
