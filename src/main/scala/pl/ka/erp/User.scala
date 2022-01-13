@@ -23,6 +23,9 @@ class User(private val userId: Int, private var name: String, private var surnam
   def setEmailAddress(x:String){
     emailAddress=x
   }
+
+  def getId(): Int = this.userId
+
 // Password validiation
 @throws(classOf[WrongPasswordException])
   def validatePassword(password1: String){
