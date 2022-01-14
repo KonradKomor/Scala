@@ -32,4 +32,22 @@ class UserRepositoryMapImplTest extends FunSuite {
     assert(user2 == repository.load(2))
     assert(user3 == repository.load(3))
   }
+
+  test("UserRepositoryMapImpl.loadByEmail") {
+    // given
+    val repository = new UserRepositoryMapImpl()
+    val user = new User(3, "Tytus", "Bomba", "Zachlapana 333", "tytus@bomba.com", "secret123456$")
+    // when
+    repository.save(user)
+
+    //then
+    assert(user == repository.loadByEmail("tytus@bomba.com"))
+  }
+
+  test("UserRepositoryMapImpl.loadByEmail2") {
+    // given
+    val repository = new UserRepositoryMapImpl()
+    //then
+    assert(null == repository.loadByEmail("tytus@bomba.com"))
+  }
 }
