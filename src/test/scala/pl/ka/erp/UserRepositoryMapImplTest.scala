@@ -3,11 +3,12 @@ package pl.ka.erp
 import org.scalatest.FunSuite
 
 class UserRepositoryMapImplTest extends FunSuite {
-
+  val passwordHashingService = new PasswordHashingService
   test("UserRepositoryMapImpl.save") {
     // given
     val repository = new UserRepositoryMapImpl()
-    val user = new User(1, "Adam", "Nowak", "Zachlapana 333", "adam@emxaple.com", "secret123456$")
+    val salt = passwordHashingService.createSalt()
+    val user = new User(1, "Adam", "Nowak", "Zachlapana 333", "adam@emxaple.com", "secret123456$", salt)
 
     // when
     repository.save(user)
@@ -18,10 +19,11 @@ class UserRepositoryMapImplTest extends FunSuite {
 
   test("UserRepositoryMapImpl.save2") {
     // given
+    val salt = passwordHashingService.createSalt()
     val repository = new UserRepositoryMapImpl()
-    val user = new User(1, "Adam", "Nowak", "Zachlapana 333", "adam@emxaple.com", "secret123456$")
-    val user2 = new User(2, "Elzbieta", "Knur", "Zachlapana 333", "adam@emxaple.com", "secret123456$")
-    val user3 = new User(3, "Tytus", "Bomba", "Zachlapana 333", "adam@emxaple.com", "secret123456$")
+    val user = new User(1, "Adam", "Nowak", "Zachlapana 333", "adam@emxaple.com", "secret123456$", salt)
+    val user2 = new User(2, "Elzbieta", "Knur", "Zachlapana 333", "adam@emxaple.com", "secret123456$", salt)
+    val user3 = new User(3, "Tytus", "Bomba", "Zachlapana 333", "adam@emxaple.com", "secret123456$", salt)
     // when
     repository.save(user)
     repository.save(user2)
@@ -35,8 +37,9 @@ class UserRepositoryMapImplTest extends FunSuite {
 
   test("UserRepositoryMapImpl.loadByEmail") {
     // given
+    val salt = passwordHashingService.createSalt()
     val repository = new UserRepositoryMapImpl()
-    val user = new User(3, "Tytus", "Bomba", "Zachlapana 333", "tytus@bomba.com", "secret123456$")
+    val user = new User(3, "Tytus", "Bomba", "Zachlapana 333", "tytus@bomba.com", "secret123456$", salt)
     // when
     repository.save(user)
 
