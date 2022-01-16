@@ -8,5 +8,9 @@ object Demo {
  var order = new Order(1,  List(item1))
     order.addItemToOrder(item2)
     println(order.sumOrderValue())
+    var x = "HasłoDupomCzaslo"
+    val passwordHashingService = new PasswordHashingService()
+    var y = passwordHashingService.doHashing(x)
+    println(y)
   }
 }
