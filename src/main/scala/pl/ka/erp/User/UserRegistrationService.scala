@@ -1,5 +1,7 @@
 package pl.ka.erp
 
+import pl.ka.erp.PasswordService.{PasswordHashingService, PasswordValidationService}
+
 class UserRegistrationService(private val userRepository: UserRepository, private val passwordValidationService: PasswordValidationService, private val passwordHashingService: PasswordHashingService) {
   // TODO doać klasę reslut z polem success i ewentualnym kodem błędu zamiast tych flag
   private val USER_ALREADY_EXISTS = false
