@@ -1,6 +1,7 @@
 package pl.ka.erp
 
 import org.scalatest.FunSuite
+import pl.ka.erp.Order.{Item, Order}
 
 class OrderTest extends FunSuite {
 

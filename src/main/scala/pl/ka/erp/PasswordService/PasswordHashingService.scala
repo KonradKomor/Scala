@@ -1,7 +1,4 @@
-package pl.ka.erp
-
-
-import sun.jvm.hotspot.HelloWorld.e
+package pl.ka.erp.PasswordService
 
 import java.security.{MessageDigest, NoSuchAlgorithmException, SecureRandom}
 

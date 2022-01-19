@@ -1,4 +1,4 @@
-package pl.ka.erp
+package pl.ka.erp.PasswordService
 
 class PasswordValidationService() {
   private val NUMBER_OF_UPPER_LETTERS = 2

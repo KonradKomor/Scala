@@ -1,4 +1,4 @@
-package pl.ka.erp
+package pl.ka.erp.User
 
 import scala.language.postfixOps
 

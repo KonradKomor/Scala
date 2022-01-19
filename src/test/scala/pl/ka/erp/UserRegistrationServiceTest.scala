@@ -1,6 +1,8 @@
 package pl.ka.erp
 
 import org.scalatest.FunSuite
+import pl.ka.erp.PasswordService.{PasswordHashingService, PasswordValidationService}
+import pl.ka.erp.User.{UserRegistrationService, UserRepositoryMapImpl}
 
 class UserRegistrationServiceTest extends FunSuite {
   val userRegistrationService = new UserRegistrationService(new UserRepositoryMapImpl(), new PasswordValidationService(), new PasswordHashingService)
