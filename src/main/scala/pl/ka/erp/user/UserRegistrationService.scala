@@ -1,6 +1,6 @@
-package pl.ka.erp.User
+package pl.ka.erp.user
 
-import pl.ka.erp.PasswordService.{PasswordHashingService, PasswordValidationService}
+import pl.ka.erp.password.{PasswordHashingService, PasswordValidationService}
 
 class UserRegistrationService(private val userRepository: UserRepository, private val passwordValidationService: PasswordValidationService, private val passwordHashingService: PasswordHashingService) {
   // TODO doać klasę reslut z polem success i ewentualnym kodem błędu zamiast tych flag

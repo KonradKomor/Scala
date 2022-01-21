@@ -1,4 +1,4 @@
-package pl.ka.erp.User
+package pl.ka.erp.user
 
 trait UserRepository {
   def save(user: User): Unit

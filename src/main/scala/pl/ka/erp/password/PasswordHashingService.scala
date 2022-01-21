@@ -1,4 +1,4 @@
-package pl.ka.erp.PasswordService
+package pl.ka.erp.password
 
 import java.security.{MessageDigest, NoSuchAlgorithmException, SecureRandom}
 

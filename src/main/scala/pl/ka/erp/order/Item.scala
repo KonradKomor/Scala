@@ -1,4 +1,4 @@
-package pl.ka.erp.Order
+package pl.ka.erp.order
 
 class Item(private val itemId: Int, private var itemName: String, private var itemCost: BigDecimal){
   def setItemName(x:String){

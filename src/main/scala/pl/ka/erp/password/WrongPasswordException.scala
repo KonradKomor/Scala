@@ -1,3 +1,3 @@
-package pl.ka.erp.PasswordService
+package pl.ka.erp.password
 
 class WrongPasswordException(s:String) extends  Exception(s) {}

@@ -1,7 +1,7 @@
-package pl.ka.erp
+package pl.ka.erp.password
 
 import org.scalatest.FunSuite
-import pl.ka.erp.PasswordService.PasswordValidationService
+import pl.ka.erp.password.PasswordValidationService
 
 class PasswordValidationServiceTest extends FunSuite {
 
